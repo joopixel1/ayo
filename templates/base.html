@@ -1,0 +1,34 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<html>
+	<head>
+		<title>Django blog</title>
+		<link href="{% static 'css/base.css' %}" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar">
+			<!-- LOGO -->
+			<div class="logo">LIBERI</div>
+			<!-- NAVIGATION MENU -->
+			<ul class="nav-links">
+				<!-- USING CHECKBOX HACK -->
+				<input type="checkbox" id="checkbox_toggle" />
+				<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+				
+				<!-- NAVIGATION MENUS -->
+				<div class="menu">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'service' %}">Services</a></li>
+					<li><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+				</div>
+			</ul>
+		</nav>
+			
+		{% block content %}
+		{% endblock content %}
+		
+		
+	</body>
+</html>

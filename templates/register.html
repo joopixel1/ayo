@@ -1,0 +1,28 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="mainb">
+	<div class="reg">
+	<h1><center>Register with us to receive a call</center></h1>
+	<form action="" method="post">
+		{% csrf_token %}
+		{{ form|crispy }}
+		</br>
+		<input type="submit" class="btn-save" value="Save" />
+	</form>
+	</div>
+</div>
+	
+	<footer style="
+	width:100%;  
+	position: fixed;
+	bottom:0;">
+		<h2>Contact me</h2>
+		<center>ayoarowolo12@hotmail.com</center>
+		<center><a href= "https://www.linkedin.com/in/ayoarowolo12">https://www.linkedin.com/in/ayoarowolo12</a></center>
+	</footer>
+	
+{% endblock content %}
